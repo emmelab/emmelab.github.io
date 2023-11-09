@@ -1,111 +1,73 @@
 <html>
-  <head>
+  <head lang="es">
+
+    <title>Escaner: del Barro al Pixel</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="style.css">
+    
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
+    
+    <script src="script.js"></script>
   </head>
   <body>
-    <a-scene
-      mindar-image="missTolerance: 1;
-                    mindar-image=warmupTolerance: 1;
-                    filterMinCF:0.001;
-                    filterBeta: 0.01;
-                    imageTargetSrc: https://cdn.glitch.global/a1f9a12d-6057-4799-96dd-8ccb04300cca/27-octubre.mind?v=1698446045050"
-      color-space="sRGB"
-      renderer="colorManagement: true, physicallyCorrectLights"
-      vr-mode-ui="enabled: false"
-      device-orientation-permission-ui="enabled: false"
-      
-    >
-      <a-assets>
-        <a-asset-item
-          id="avatarModel"
-          src="https://cdn.glitch.global/a1f9a12d-6057-4799-96dd-8ccb04300cca/scene.glb?v=1698510447174"
-        ></a-asset-item>
-      </a-assets>
+    <div aria-hidden="true" class="bg"></div>
+    <main>
+      <section class="pantalla portada">
+        <div class="card titulo">
+          <img src="assets/title.png" alt="Escaner, del barro al pixel">
+        </div>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-box
-          position="0 0 0.5"
-          color="orange"
-        >
-        </a-box>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 1">
-        <a-box
-          position="0 0 0.5"
-          color="red"
-        >
-        </a-box>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 2">
-        <a-box
-          position="0 0 0.5"
-          color="blue"
-        >
-        </a-box>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 3">
-        <a-box
-          position="0 0 0.5"
-          color="green"
-        >
-        </a-box>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 4">
-        <a-box
-          position="0 0 0.5"
-          color="yellow"
-        >
-        </a-box>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 5">
-        <a-box
-          position="0 0 0.5"
-          color="cian"
-        >
-        </a-box>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 6">
-        <a-box
-          position="0 0 0.5"
-          color="magenta"
-        >
-        </a-box>
-        <a-entity gltf-model="#avatarModel"></a-entity>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 7">
-        <a-box
-          position="0 0 0.5"
-          color="salmon"
-        >
-        </a-box>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 8">
-        <a-box
-          position="0 0 0.5"
-          color="aquamarine"
-        >
-        </a-box>
-      </a-entity>
-      
-      <a-entity mindar-image-target="targetIndex: 9">
-        <a-box
-          position="0 0 0.5"
-          color="brown"
-        >
-        </a-box>
-      </a-entity>
-      
-    </a-scene>
+        <div class="btn-container">
+          <a href="ar.html">
+            <button class="btn main">
+              ¡Arrancar!
+            </button>
+          </a>
+
+          <button class="btn" onclick="goTo('.cuento')">
+            ¿Qué es esto?
+          </button>
+        </div>
+      </section>
+
+      <section class="pantalla cuento">
+        <div class="card">
+          <p>
+            <span>Escaner</span> es la primera muestra de <b>Realidad Aumentada</b> y <b>Fotogrametría</b> realizada en la facultad. Es el resultado de un taller realizado el 10/11/2023 por integrantes del <b>emmeLab</b>. <br><br>Consiste en una serie de obras digitales dispuestas en diferentes espacios del edificio de Sede Central. Dichos objetos se pueden ver a través de la realidad aumentada en esta misma página web. <br><br>El eje en esta ocasión fue la vida dentro de la Facultad de Artes, o lo que eso signfique. <br><br>Para ver dónde están las obras abrí el mapa, y para ver cada obra apuntá tu cámara al espacio de la facu en el que estés.
+          </p>
+        </div>
+
+      </section>
+
+      <section class="pantalla mapa">
+
+        <div class="button-container">
+          <button class="btn" onclick="goTo('.mapa')">
+            Mapa de cada espacio
+          </button>
+        </div>
+
+        <div class="img-container">
+          <img src="assets/planta_baja.jpg" alt="Mapa de la Planta Baja">
+          <img src="assets/target_1.jpg" alt="Primer espacio: Un Graffitti de una Banana">
+          <img src="assets/target_2-3-4.jpg" alt="Segundo espacio: Un tríptico en la puerta del buffet">
+          <img src="assets/target_5-6-7.jpg" alt="Tercer espacio: Un tríptico en la puerta del departamento de Artes Visuales">
+          <img src="assets/target_8.jpg" alt="Espacio 8, una puerta intervenida al lado de la escalera">
+          <img src="assets/primer_piso.png" alt="Mapa del primer piso">
+          <img src="assets/target_9.jpg" alt="Espacio 9, un collage en un armario, en el primer piso">
+          <img src="assets/segundo_piso.png" alt="Mapa de la Planta Baja">
+          <img src="assets/target_10.jpg" alt="Espacio 10, una puerta al final del pasillo, en el segundo piso">
+
+        </div>
+      </section>
+
+      <a href="https://www.instagram.com/emmelab_/" id="floating-emmelab">
+        <img src="assets/emmelabButton.png" alt="emmelab">
+      </a>
+
+    </main>
   </body>
 </html>
