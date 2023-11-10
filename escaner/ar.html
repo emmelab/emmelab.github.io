@@ -22,88 +22,107 @@
           id="avatarModel"
           src="https://cdn.glitch.global/a1f9a12d-6057-4799-96dd-8ccb04300cca/scene.glb?v=1698510447174"
         ></a-asset-item>
+        
+        <a-asset-item
+          id="model-01"
+          src="models/01.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-02"
+          src="models/02.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-03"
+          src="models/03.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-04"
+          src="models/04.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-05"
+          src="models/05.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-06"
+          src="models/05.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-07"
+          src="models/07.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-08"
+          src="models/08.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-09"
+          src="models/09.glb"
+        ></a-asset-item>
+
+        <a-asset-item
+          id="model-10"
+          src="models/10.glb"
+        ></a-asset-item>
+
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-box
+        <!--<a-box
           position="0 0 0.5"
           color="orange"
         >
-        </a-box>
+        </a-box>-->
+        <a-entity gltf-model="#model-01"></a-entity>
       </a-entity>
+
+      <!--<a-entity gltf-model="#avatarModel"></a-entity>-->
       
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-box
-          position="0 0 0.5"
-          color="red"
-        >
-        </a-box>
+        <a-entity gltf-model="#model-02"></a-entity>
       </a-entity>
       
       <a-entity mindar-image-target="targetIndex: 2">
-        <a-box
-          position="0 0 0.5"
-          color="blue"
-        >
-        </a-box>
+        <a-entity gltf-model="#model-03"></a-entity>
       </a-entity>
       
       <a-entity mindar-image-target="targetIndex: 3">
-        <a-box
-          position="0 0 0.5"
-          color="green"
-        >
-        </a-box>
+        <a-entity gltf-model="#model-04"></a-entity>
       </a-entity>
       
       <a-entity mindar-image-target="targetIndex: 4">
-        <a-box
-          position="0 0 0.5"
-          color="yellow"
-        >
-        </a-box>
+        <a-entity gltf-model="#model-05"></a-entity>
       </a-entity>
       
       <a-entity mindar-image-target="targetIndex: 5">
-        <a-box
-          position="0 0 0.5"
-          color="cian"
-        >
-        </a-box>
+        <a-entity gltf-model="#model-06"></a-entity>
       </a-entity>
       
       <a-entity mindar-image-target="targetIndex: 6">
-        <a-box
-          position="0 0 0.5"
-          color="magenta"
-        >
-        </a-box>
-        <a-entity gltf-model="#avatarModel"></a-entity>
+        <a-entity gltf-model="#model-07"></a-entity>
+        
       </a-entity>
       
       <a-entity mindar-image-target="targetIndex: 7">
-        <a-box
-          position="0 0 0.5"
-          color="salmon"
-        >
-        </a-box>
+        <a-entity gltf-model="#model-08"></a-entity>
       </a-entity>
       
       <a-entity mindar-image-target="targetIndex: 8">
-        <a-box
-          position="0 0 0.5"
-          color="aquamarine"
-        >
-        </a-box>
+        <a-entity gltf-model="#model-09"></a-entity>
       </a-entity>
       
       <a-entity mindar-image-target="targetIndex: 9">
-        <a-box
-          position="0 0 0.5"
-          color="brown"
-        >
-        </a-box>
+        <a-entity gltf-model="#model-10"></a-entity>
       </a-entity>
       
     </a-scene>
